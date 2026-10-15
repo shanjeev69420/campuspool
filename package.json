@@ -1,0 +1,17 @@
+{
+  "name": "campuspool",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vehicle pooling for college students — book seats in cars and bikes, and see the routes students take to campus.",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "dev:remote": "wrangler dev --remote",
+    "db:local": "wrangler d1 execute campuspool --local --file=./schema.sql",
+    "deploy": "wrangler deploy",
+    "check": "node --check worker/index.js && node --check public/app.js"
+  },
+  "devDependencies": {
+    "wrangler": "^4.151.0"
+  }
+}

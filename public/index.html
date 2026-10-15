@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#4f46e5" />
+    <title>CampusPool — share the ride to college</title>
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#/find" aria-label="CampusPool home">
+        <span class="brand-mark" aria-hidden="true">CP</span>
+        <span>
+          <strong>CampusPool</strong>
+          <small id="brand-sub">Ride sharing for students</small>
+        </span>
+      </a>
+      <nav class="tabs" id="tabs" aria-label="Sections">
+        <a href="#/find" data-route="find">Find a ride</a>
+        <a href="#/offer" data-route="offer">Offer a ride</a>
+        <a href="#/routes" data-route="routes">Routes</a>
+        <a href="#/bookings" data-route="bookings">My bookings</a>
+      </nav>
+    </header>
+
+    <main id="view" class="view" aria-live="polite"></main>
+
+    <footer class="footer">
+      <p>
+        CampusPool connects students travelling to <span id="foot-college">campus</span>. Route lines are
+        approximate — always confirm the exact pickup point with your driver.
+      </p>
+    </footer>
+
+    <div class="modal" id="modal" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" data-close-modal aria-label="Close">×</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" hidden></div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

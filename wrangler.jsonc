@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "campuspool",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "campuspool",
+      "database_id": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "dev": {
+    "port": 3001
+  },
+  "observability": {
+    "enabled": true
+  }
+}
